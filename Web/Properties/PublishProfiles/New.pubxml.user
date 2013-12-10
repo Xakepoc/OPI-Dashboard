@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/data.xlsx">
+      <publishTime>11/08/2013 18:32:59</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>11/12/2013 17:39:57</publishTime>
+    </File>
+    <File Include="bin/Excel.dll">
+      <publishTime>12/03/2013 12:42:54</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>12/03/2013 12:42:59</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>11/12/2013 17:39:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/12/2013 17:39:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/12/2013 17:39:59</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>11/12/2013 17:39:59</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/12/2013 17:39:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/12/2013 17:39:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/12/2013 17:39:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/12/2013 17:39:58</publishTime>
+    </File>
+    <File Include="bin/Web.dll">
+      <publishTime>12/10/2013 14:30:43</publishTime>
+    </File>
+    <File Include="Content/assets/css/animate.min.css">
+      <publishTime>12/06/2013 11:42:26</publishTime>
+    </File>
+    <File Include="Content/assets/css/custom-icon-set.css">
+      <publishTime>12/06/2013 11:42:35</publishTime>
+    </File>
+    <File Include="Content/assets/css/responsive.css">
+      <publishTime>12/06/2013 11:42:44</publishTime>
+    </File>
+    <File Include="Content/assets/css/style.css">
+      <publishTime>12/10/2013 13:13:46</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/custom-set.dev.svg">
+      <publishTime>12/06/2013 12:30:53</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/custom-set.eot">
+      <publishTime>12/06/2013 12:31:00</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/custom-set.svg">
+      <publishTime>12/06/2013 12:31:05</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/custom-set.ttf">
+      <publishTime>12/06/2013 12:31:11</publishTime>
+    </File>
+    <File Include="Content/assets/fonts/custom-set.woff">
+      <publishTime>12/06/2013 12:31:16</publishTime>
+    </File>
+    <File Include="Content/assets/img/icon/portlet-tray.png">
+      <publishTime>12/06/2013 12:52:08</publishTime>
+    </File>
+    <File Include="Content/assets/img/icon/status.png">
+      <publishTime>12/10/2013 14:08:22</publishTime>
+    </File>
+    <File Include="Content/assets/img/icon/top-tray.png">
+      <publishTime>12/06/2013 12:32:33</publishTime>
+    </File>
+    <File Include="Content/assets/img/pullup.png">
+      <publishTime>12/06/2013 12:52:23</publishTime>
+    </File>
+    <File Include="Content/assets/js/core.js">
+      <publishTime>12/06/2013 11:44:35</publishTime>
+    </File>
+    <File Include="Content/assets/js/demo.js">
+      <publishTime>12/06/2013 11:44:48</publishTime>
+    </File>
+    <File Include="Content/assets/js/search_results.js">
+      <publishTime>12/10/2013 12:48:16</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/boostrapv3/css/bootstrap-theme.min.css">
+      <publishTime>12/06/2013 11:46:23</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/boostrapv3/css/bootstrap.min.css">
+      <publishTime>12/06/2013 11:46:28</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/bootstrap/js/bootstrap.min.js">
+      <publishTime>12/06/2013 11:48:28</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/breakpoints.js">
+      <publishTime>12/06/2013 11:54:01</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/font-awesome/css/font-awesome.css">
+      <publishTime>12/06/2013 11:49:20</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/jquery-1.8.3.min.js">
+      <publishTime>12/06/2013 11:54:06</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/jquery-block-ui/jqueryblockui.js">
+      <publishTime>12/06/2013 11:49:47</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/jquery-mixitup/jquery.mixitup.min.js">
+      <publishTime>12/06/2013 14:50:18</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js">
+      <publishTime>12/06/2013 11:50:50</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/jquery-slider/css/jquery.sidr.light.css">
+      <publishTime>12/06/2013 11:51:26</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/jquery-slider/jquery.sidr.min.js">
+      <publishTime>12/06/2013 11:51:33</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js">
+      <publishTime>12/06/2013 11:52:27</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/jquery-superbox/css/style.css">
+      <publishTime>12/06/2013 14:51:35</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js">
+      <publishTime>12/06/2013 11:52:45</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/jquery-unveil/jquery.unveil.min.js">
+      <publishTime>12/06/2013 11:53:16</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/pace/pace-theme-flash.css">
+      <publishTime>12/06/2013 11:53:38</publishTime>
+    </File>
+    <File Include="Content/assets/plugins/pace/pace.min.js">
+      <publishTime>12/06/2013 11:53:43</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-theme.css">
+      <publishTime>11/12/2013 17:48:10</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-theme.min.css">
+      <publishTime>11/12/2013 17:48:10</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.css">
+      <publishTime>11/14/2013 11:56:12</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css">
+      <publishTime>11/12/2013 17:48:10</publishTime>
+    </File>
+    <File Include="Content/css/jquery.jqplot.min.css">
+      <publishTime>11/13/2013 11:32:35</publishTime>
+    </File>
+    <File Include="Content/css/styles.css">
+      <publishTime>12/04/2013 14:04:10</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/12/2013 17:48:10</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/12/2013 17:48:10</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/12/2013 17:48:10</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/12/2013 17:48:10</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/12/2013 17:39:56</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/12/2013 17:40:00</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>11/12/2013 17:48:43</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>11/12/2013 17:48:43</publishTime>
+    </File>
+    <File Include="Scripts/excanvas.min.js">
+      <publishTime>11/13/2013 11:32:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery.flot.categories.min.js">
+      <publishTime>11/13/2013 11:44:57</publishTime>
+    </File>
+    <File Include="Scripts/jquery.flot.min.js">
+      <publishTime>11/13/2013 11:54:29</publishTime>
+    </File>
+    <File Include="Scripts/jquery.jqplot.min.js">
+      <publishTime>11/13/2013 11:32:22</publishTime>
+    </File>
+    <File Include="Views/Dashboard/Index.cshtml">
+      <publishTime>12/10/2013 13:39:33</publishTime>
+    </File>
+    <File Include="Views/Dashboard/ProjectDetails.cshtml">
+      <publishTime>12/10/2013 13:38:59</publishTime>
+    </File>
+    <File Include="Views/Dashboard/Projects.cshtml">
+      <publishTime>12/10/2013 13:39:04</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>11/12/2013 17:39:56</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>12/10/2013 14:06:50</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>11/12/2013 17:39:56</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>11/14/2013 13:46:28</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/10/2013 14:30:43</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

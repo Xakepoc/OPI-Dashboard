@@ -1,0 +1,225 @@
+﻿@{
+    ViewBag.Title = "Project Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Globalization
+@model Web.Models.ProjectModel
+           
+
+<div class="content">  
+    <ul class="breadcrumb">
+        <li><p>YOU ARE HERE</p></li> 
+        <i class="icon-angle-right"></i> 
+        <li><a href="#" class="active">@Model.Region</a></li>
+        <i class="icon-angle-right"></i> 
+        <li><a href="#" class="active">@Model.Country</a></li>
+        <li><a href="#" class="active">@Model.ProjectName</a></li>
+    </ul>
+    <div class="page-title">	
+        <h3>@Model.ProjectName</h3>		
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <!--////////// PROJECT INTRODUCTION //////////-->
+            <div class="grid simple">
+                <div class="grid-title no-border">
+                    <h4>Project <span class="semi-bold">Introduction</span></h4>
+                    <div class="tools">
+                        <a href="javascript:;" class="collapse"></a>
+                    </div>
+                </div>
+                <div class="grid-body no-border">
+                    <p>@Model.Description</p>
+                </div>
+            </div>
+
+            <!--////////// INFO BOXES //////////-->
+            <div class="col-md-6">
+                <div class="tiles green added-margin spacing-bottom">
+                    <div class="tiles-body">
+                        <div class="controller">								
+                            <a href="javascript:;" class="reload"></a>
+                        </div>	
+                        <div class="tiles-title">
+                            TOTAL AWARD
+                        </div>	
+                        <div class="heading">
+                            $ <span class="animate-number" data-value="@Model.TotalAward" data-animation-duration="1200">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tiles green added-margin spacing-bottom">
+                    <div class="tiles-body">
+                        <div class="controller">								
+                            <a href="javascript:;" class="reload"></a>
+                        </div>	
+                        <div class="tiles-title">
+                            TOTAL DIRECT EXPENSES
+                        </div>	
+                        <div class="heading">
+                            $ <span class="animate-number" data-value="@Model.TotalDirectExpenses" data-animation-duration="1200">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tiles green added-margin spacing-bottom">
+                    <div class="tiles-body">
+                        <div class="controller">								
+                            <a href="javascript:;" class="reload"></a>
+                        </div>	
+                        <div class="tiles-title">
+                            TOTAL SUBAWARD
+                        </div>	
+                        <div class="heading">
+                            $ <span class="animate-number" data-value="@Model.TotalSubaward" data-animation-duration="1200">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tiles green added-margin spacing-bottom">
+                    <div class="tiles-body">
+                        <div class="controller">								
+                            <a href="javascript:;" class="reload"></a>							
+                        </div>	
+                        <div class="tiles-title">
+                            COST RECOVERY PERCENTAGE
+                        </div>	
+                        <div class="heading">
+                            <span class="" data-value="" data-animation-duration="1200">@Math.Round(Model.CostRecoveryPercentage,1)</span>%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tiles green added-margin spacing-bottom">
+                    <div class="tiles-body">
+                        <div class="controller">								
+                            <a href="javascript:;" class="reload"></a>							
+                        </div>	
+                        <div class="tiles-title">
+                            TOTAL FEES / OH / CONTINGENGY
+                        </div>	
+                        <div class="heading">
+                            $ <span class="animate-number" data-value="@Model.TotalFeesOhContingency" data-animation-duration="1200">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tiles green added-margin spacing-bottom">
+                    <div class="tiles-body">
+                        <div class="controller">								
+                            <a href="javascript:;" class="reload"></a>							
+                        </div>	
+                        <div class="tiles-title">
+                            FIXED PRICE
+                        </div>	
+                        <div class="heading">
+                            @(Model.FixedPrice ? "YES" : "NO")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>			
+
+        <div class="col-md-6">
+				
+            <!--////////// DATA TABLE ////////// -->
+            <div class="grid simple ">
+                <div class="grid-title no-border">
+                    <h4>Project <span class="semi-bold">Data</span></h4>
+                    <div class="tools">	
+                        <a href="javascript:;" class="collapse"></a>
+                    </div>
+                </div>
+                <div class="grid-body no-border">
+
+                    <table class="table table-striped table-flip-scroll cf">
+                            
+                        <tbody>
+                            <tr>
+                                <td><span class="semi-bold text-success">Region</span></td>
+                                <td><a href="@Url.Action("Projects", "Dashboard", new RouteValueDictionary(new { region = Model.Region }))">@Model.Region</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="semi-bold text-success">Country</span></td>
+                                <td><a href="@Url.Action("Projects", "Dashboard", new RouteValueDictionary(new { country = Model.Country }))">@Model.Country</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="semi-bold text-success">Impact Area</span></td>
+                                <td><a href="@Url.Action("Projects", "Dashboard", new RouteValueDictionary(new { impactArea = Model.ImpactArea }))">@Model.ImpactArea</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="semi-bold text-success">Core Competency</span></td>
+                                <td><a href="@Url.Action("Projects", "Dashboard", new RouteValueDictionary(new { coreCompetency = Model.CoreCompetancy }))">@Model.CoreCompetancy</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="semi-bold text-success">Start Date</span></td>
+                                <td>@Model.StartDate.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="semi-bold text-success">End Date</span></td>
+                                <td>@Model.EndDate.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                       
+                </div>
+            </div>
+
+            <!--////////// DC OFFICE //////////-->
+            <div class="grid simple ">
+                <div class="grid-title no-border">
+                    <h4>Contact <span class="semi-bold">Details</span></h4>
+                    <div class="tools">	
+                        <a href="javascript:;" class="collapse"></a>
+                    </div>
+                </div>
+                <div class="grid-body no-border">
+
+                    <table class="table table-striped table-flip-scroll cf">
+                            
+                        <tbody>
+                            <tr>
+                                <td><span class="semi-bold text-success">DC Office</span></td>
+                                <td>@Model.ContactsDcName</td>
+                                <td><a href="mailto:@Model.ContactsDcEmail">@Model.ContactsDcEmail</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="semi-bold text-success">Country Office</span></td>
+                                <td>@Model.ContactsCountryName</td>
+                                <td><a href="mailto:@Model.ContactsCountryEmail">@Model.ContactsCountryEmail</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                       
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--////////// DONOR INFORMATION //////////-->
+    <div class="grid simple">
+        <div class="grid-title no-border">
+            <h4>Donor <span class="semi-bold">Information</span></h4>
+            <div class="tools">
+                <a href="javascript:;" class="collapse"></a>
+            </div>
+        </div>
+        <div class="grid-body no-border">
+            <h4>@Model.Donor</h4>
+            <p>@Model.DonorDescription</p> 
+
+            <a href="http://@Model.DonorUrl" target="_blank" class="btn btn-primary">Visit Donor Website</a>
+        </div>
+    </div>
+
+</div>
