@@ -10,9 +10,24 @@ namespace Web.Models
 {
     public class ListOfProjectsModel
     {
-        public decimal CoreProjects { get; set; }
+        /*public decimal CoreProjects { get; set; }
         public decimal PortfolioPersent { get; set; }
-        public decimal TotalWoPgmf { get; set; }
+        public decimal TotalWoPgmf { get; set; }*/
+
+        public decimal TotalPortfolio { get; set; }
+        public decimal CoreProjects { get; set; }
+        public decimal CoreProjectsPercent { get; set; }
+        public decimal TotalGates { get; set; }
+        public decimal TotalGatesPercent { get; set; }
+
+        public int NumberOfProjects { get; set; }
+        public decimal StrategicProjects { get; set; }
+        public decimal StrategicProjectsPercent { get; set; }
+        public decimal TotalChevron { get; set; }
+        public decimal TotalChevronPercent { get; set; }
+        public decimal TotalCocaCola { get; set; }
+        public decimal TotalCocaColaPercent { get; set; }
+
         public List<ProjectModel> Projects
         {
             get
@@ -29,17 +44,37 @@ namespace Web.Models
                     var project = new ProjectModel();
                    
                     project.Zcode = excelReader.GetString(0);
-                    if (excelReader.GetString(8) != null && excelReader.GetString(8).TrimEnd() == "core projects")
-                        CoreProjects = excelReader.GetDecimal(9);
-                    if (excelReader.GetString(8) != null && excelReader.GetString(8).TrimEnd() == "% of portfolio")
+      
+                    if (excelReader.GetString(8) != null && excelReader.GetString(8).TrimEnd() == "total portfolio")
                     {
-                        var d = double.Parse(excelReader.GetString(9).Replace(',', '.'),
-                                                                      System.Globalization.CultureInfo.InvariantCulture);
-                        PortfolioPersent = (Decimal)d;
+                        TotalPortfolio = excelReader.GetDecimal(9);
                     }
-                        
-                    if (excelReader.GetString(8) != null && excelReader.GetString(8).TrimEnd() == "total without PGMF")
-                        TotalWoPgmf = excelReader.GetDecimal(9);
+
+                    if (excelReader.GetString(8) != null && excelReader.GetString(8).TrimEnd() == "core projects")
+                    {
+                        CoreProjects = excelReader.GetDecimal(9);
+                    }
+
+                    if (excelReader.GetString(8) != null && excelReader.GetString(8).TrimEnd() == "total Gates")
+                    {
+                        TotalGates = excelReader.GetDecimal(9);
+                    }
+
+                    if (excelReader.GetString(8) != null && excelReader.GetString(8).TrimEnd() == "strategic projects")
+                    {
+                        StrategicProjects = excelReader.GetDecimal(9);
+                    }
+
+                    if (excelReader.GetString(8) != null && excelReader.GetString(8).TrimEnd() == "total Chevron")
+                    {
+                        TotalChevron = excelReader.GetDecimal(9);
+                    }
+
+                    if (excelReader.GetString(8) != null && excelReader.GetString(8).TrimEnd() == "total Coca-cola")
+                    {
+                        TotalCocaCola = excelReader.GetDecimal(9);
+                    }
+
                     if(project.Zcode == null)
                         continue;
                     project.ProjectName = excelReader.GetString(1);

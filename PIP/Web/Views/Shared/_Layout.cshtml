@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Web.Models
+<!DOCTYPE html>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <head>
     <meta charset="utf-8" />
@@ -63,7 +64,7 @@
                 </ul>
                 <!-- BEGIN LOGO -->
                 <a href="@Url.Action("Index", "Dashboard")"><!-- <img src="assets/img/logo.png" class="logo"  data-src="assets/img/logo.png" data-src-retina="assets/img/logo2x.png" width="106" height="21"/>-->
-                    <span style="color:white; padding: 24px; font-weight:bold; line-height: 56px;font-size: 20px;">PACT - OPI</span></a>
+                    <span style="color:white; padding: 24px; font-weight:bold; line-height: 56px;font-size: 15px;padding-right: 7px;">Pact Institute</span><span style="color: #FFF;font-size: 12px;">(beta)</span></a>
                 <!-- END LOGO -->
                 <ul class="nav pull-right notifcation-center">
                     <li class="dropdown" id="header_task_bar"> <a href="@Url.Action("Index", "Dashboard")" class="dropdown-toggle active" data-toggle="">
@@ -134,8 +135,12 @@
    <!-- BEGIN SIDEBAR MENU -->	
 	<p class="menu-title">NAVIGATION <span class="pull-right"><a href="javascript:;"><i class="icon-refresh"></i></a></span></p>
      <ul>	
-      <li class="start active"> <a href="@Url.Action("Index", "Dashboard")"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span> </a> </li>
-      <li class=""> <a href="@Url.Action("Projects", "Dashboard")"> <i class="icon-custom-form"></i> <span class="title">Projects List</span> <span class=" badge badge-disable pull-right ">26</span></a> </li>
+         <li class="start active"> <a href="@Url.Action("Index", "Dashboard")"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span> </a> </li>
+         @{
+             var model = new ListOfProjectsModel();
+             var count = model.Projects.Count();
+         }
+      <li class=""> <a href="@Url.Action("Projects", "Dashboard")"> <i class="icon-custom-form"></i> <span class="title">Projects List</span> <span id="numberOfProjects" class=" badge badge-disable pull-right ">@count</span></a> </li>
          
     </ul>
 	
@@ -149,8 +154,7 @@
 
   <!-- BEGIN PAGE CONTAINER-->
     <div class="page-content">
-        @RenderBody() 
-        
+        @RenderBody()
     </div>
     
 

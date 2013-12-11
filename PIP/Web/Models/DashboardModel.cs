@@ -48,12 +48,18 @@ namespace Web.Models
             Chart.MaxAward = Chart.CountryList.Max(arg => arg.TotalAward);
             Statistic = new StatisticModel
                 {
-                    CoreProjects = projects.CoreProjects/1000000,
-                    TotalWoPGMF = projects.TotalWoPgmf/1000000,
+                    CoreProjects = projects.CoreProjects,
+                    CoreProjectsPercent = (projects.CoreProjects / projects.TotalPortfolio * 100m),
+                    StrategicProjects = projects.StrategicProjects,
+                    StrategicProjectsPercent = (projects.StrategicProjects / projects.TotalPortfolio * 100m),
+                    TotalPortfolio = projects.TotalPortfolio,
                     NumberOfProjects = list.Count(),
-                    LargestAward = list.Max(arg => arg.TotalAward)/1000000,
-                    PercentOfPortfolio = projects.PortfolioPersent*100,
-                    TotalDirectExpenses = list.Sum(arg => arg.TotalDirectExpenses)/1000000
+                    TotalChevron = projects.TotalChevron,
+                    TotalChevronPercent = (projects.TotalChevron / projects.TotalPortfolio * 100m),
+                    TotalCocaCola = projects.TotalCocaCola,
+                    TotalCocaColaPercent = (projects.TotalCocaCola / projects.TotalPortfolio * 100m),
+                    TotalGates = projects.TotalGates,
+                    TotalGatesPercent = (projects.TotalGates / projects.TotalPortfolio * 100m),
                 };
         }
     }
@@ -73,12 +79,19 @@ namespace Web.Models
 
     public class StatisticModel
     {
-        public decimal LargestAward { get; set; }
-        public int NumberOfProjects { get; set; }
-        public decimal TotalDirectExpenses { get; set; }
+        public decimal TotalPortfolio { get; set; }
         public decimal CoreProjects { get; set; }
-        public decimal PercentOfPortfolio { get; set; }
-        public decimal TotalWoPGMF { get; set; }
+        public decimal CoreProjectsPercent { get; set; }
+        public decimal TotalGates { get; set; }
+        public decimal TotalGatesPercent { get; set; }
+
+        public int NumberOfProjects { get; set; }
+        public decimal StrategicProjects { get; set; }
+        public decimal StrategicProjectsPercent { get; set; }
+        public decimal TotalChevron { get; set; }
+        public decimal TotalChevronPercent { get; set; }
+        public decimal TotalCocaCola { get; set; }
+        public decimal TotalCocaColaPercent { get; set; }
     }
 
     public class ChartModel

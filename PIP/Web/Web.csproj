@@ -132,6 +132,7 @@
     <Content Include="Content\assets\plugins\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\assets\plugins\breakpoints.js" />
     <Content Include="Content\assets\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\assets\plugins\font-awesome\font\fontawesome-webfont.svg" />
     <Content Include="Content\assets\plugins\jquery-1.8.3.min.js" />
     <Content Include="Content\assets\plugins\jquery-block-ui\jqueryblockui.js" />
     <Content Include="Content\assets\plugins\jquery-mixitup\jquery.mixitup.min.js" />
@@ -195,6 +196,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\data.xlsx" />
+    <Content Include="Content\assets\plugins\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="Content\assets\plugins\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\assets\plugins\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="Content\assets\plugins\font-awesome\font\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\New.pubxml" />
   </ItemGroup>
   <PropertyGroup>
