@@ -1,0 +1,217 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Globalization
+@model Web.Models.DashboardModel
+
+<div class="content">  
+            <div class="page-title">	
+                <h3>PACT Institute Projects - FY 2014</h3>		
+            </div>
+
+            <div class="row spacing-bottom 2col">
+                <div class="col-md-8">
+                    <div class="row spacing-bottom">
+                        <div class="col-sm-6">
+                            <div class="tiles green added-margin">
+                                <div class="tiles-body">
+                                    <div class="tiles-title">
+                                        LARGEST AWARDS
+                                    </div>	
+                                    <div class="heading">
+                                        $ <span class="animate-number" data-value="@Model.Statistic.LargestAward.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="1200">0</span>M
+                                    </div>
+                                    <div class="progress transparent progress-white progress-small no-radius">
+                                        <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="100%" ></div>
+                                    </div>
+                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 spacing-bottom-sm">
+                            <div class="tiles green added-margin">
+                                <div class="tiles-body">	
+                                    <div class="tiles-title">
+                                        NUMBER OF PROJECTS
+                                    </div>	
+                                    <div class="heading">
+                                        <span class="animate-number" data-value="@Model.Statistic.NumberOfProjects" data-animation-duration="1000">0</span>	
+                                    </div>
+                                    <div class="progress transparent progress-small no-radius">
+                                        <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="100%" ></div>
+                                    </div>				
+                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row spacing-bottom">
+                        <div class="col-sm-6">
+                            <div class="tiles green added-margin">
+                                <div class="tiles-body">
+                                    <div class="tiles-title">
+                                        TOTAL DIRECT EXPENSES
+                                    </div>	
+                                    <div class="heading">
+                                        $ <span class="animate-number" data-value="@Model.Statistic.TotalDirectExpenses.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="600">0</span>M
+                                    </div>
+                                    <div class="progress transparent progress-white progress-small no-radius">
+                                        <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="100%" ></div>
+                                    </div>
+                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-sm-6">
+                            <div class="tiles green added-margin">
+                                <div class="tiles-body">
+                                    <div class="tiles-title">
+                                        CORE PROJECTS
+                                    </div>	
+                                    <div class="heading">
+                                        $ <span class="animate-number" data-value="@Model.Statistic.CoreProjects.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="1200">0</span>M
+                                    </div>
+                                    <div class="progress transparent progress-white progress-small no-radius">
+                                        <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="100%" ></div>
+                                    </div>
+                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                </div>
+                            </div>
+                        </div> 
+
+                    </div>
+                    <div class="row spacing-bottom">
+                        <div class="col-sm-6 spacing-bottom-sm">
+                            <div class="tiles green added-margin">
+                                <div class="tiles-body">		
+                                    <div class="tiles-title">
+                                        %OF PORTFOLIO
+                                    </div>	
+                                    <div class="heading">
+                                        <span class="animate-number" data-value="@Model.Statistic.PercentOfPortfolio.ToString("#", CultureInfo.InvariantCulture)" data-animation-duration="1000">0</span>%	
+                                    </div>
+                                    <div class="progress transparent progress-small no-radius">
+                                        <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="@Model.Statistic.PercentOfPortfolio.ToString("#", CultureInfo.InvariantCulture)%" ></div>
+                                    </div>				
+                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="tiles green added-margin">
+                                <div class="tiles-body">
+                                    <div class="tiles-title">
+                                        TOTAL W/O PGMF
+                                    </div>	
+                                    <div class="heading">
+                                        $ <span class="animate-number" data-value="@Model.Statistic.TotalWoPGMF.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="1200">0</span>M
+                                    </div>
+                                    <div class="progress transparent progress-white progress-small no-radius">
+                                        <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="100%" ></div>
+                                    </div>
+                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                </div>
+                            </div>
+                        </div> 
+
+                    </div>
+                </div>
+                <!--////////// END PROGRESS BOXES //////////-->
+
+
+                <!--////////// COUNTRY LIST ////////// -->
+                <div class="col-md-4">
+
+                    <div class="grid simple">
+                        <div class="grid-title no-border">
+                            <h4>Projects by <span class="semi-bold">Country</span></h4>
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse"></a>
+                            </div>
+                        </div>
+                        <div class="grid-body no-border">
+                            @foreach (var region in Model.Regions)
+                            {
+                                <h4>@region.RegionName</h4>
+                                foreach (var country in region.CountryList)
+                                {
+                                    <a href="@Url.Action("Projects", "Dashboard", new RouteValueDictionary(new { country = country.CountryName }))" style="margin-bottom: 5px;" class="btn">
+                                        @country.CountryName 
+                                        <span class="badge badge-important">@country.ProjectCount</span>
+                                    </a>
+                                }
+                            }
+                        </div>
+                    </div> 
+                </div>
+                <!--////////// END COUNTRY LIST //////////-->
+
+            </div><!-- /row -->
+
+
+            <div class="row tiles-container tiles white spacing-bottom">	
+                <div class="tile-more-content col-md-12 col-sm-12 no-padding">
+                    <div class="tiles green">
+                        <div class="tiles-body">
+                            <div class="heading">
+                                TOTAL AWARD 
+                            </div>	
+                        </div>
+                        <div class="tile-footer">
+                            <div class="iconplaceholder"><i class="icon-map-marker"></i></div>@Model.Regions.Sum(arg => arg.CountryList.Count()) Countries, @Model.Statistic.NumberOfProjects Projects
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-12">
+				
+                        <div class="tiles-body" >
+
+                            <div class="row">
+                                @for (var index = 0; index < 3; index++)
+                                {
+                                    var len = Model.Chart.CountryList.Count();
+                                    var border = (len%3 == 0 ? len/3 : len/3 + 1);
+                                    
+                                    <div class="col-md-4">
+                                        <ul class="progress-list" >
+                                            @for (var jndex = 0; jndex < border; jndex++)
+                                            {
+                                                <li>
+                                                    @if (index * border + jndex >= len)
+                                                    {
+                                                        break;
+                                                    }
+                                                    else
+                                                    {
+                                                        var country = Model.Chart.CountryList[index*border + jndex];
+                                                        <div class="details-wrapper">
+                                                            <div class="name">@country.CountryName</div>
+                                                        </div>
+                                                        <div class="heading pull-right">
+                                                            $ <span class="animate-number" data-value="@country.TotalAward" data-animation-duration="1200">0</span>
+                                                        </div>
+                                                        <div class="clearfix"></div>       
+                                                        <div class="progress no-radius" >
+                                                            <div class="progress-bar progress-bar-success animate-progress-bar" data-percentage="@(( (country.TotalAward/Model.Chart.MaxAward)*100).ToString ("#",CultureInfo.InvariantCulture) )%" ></div>
+                                                        </div>
+                                                    }
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                }
+                            </div>
+
+                        </div>
+				  
+                    </div>
+                </div>		  
+            </div>
+
+        </div>
