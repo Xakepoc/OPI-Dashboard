@@ -982,7 +982,7 @@ hr {
   display: block;
   width: 8px;
   height: 25px;
-  background-image: url("../img/sidebar-menu-arrow.png");
+  background-image: url("http://dummy.dev4.webenabled.net/opi-app/assets/img/sidebar-menu-arrow.png");
   float: right;
   position: absolute;
   right:-8px;
@@ -6868,7 +6868,7 @@ ul.my-friends li .profile-pic{
 #Parks.list .titles{
 	display: inline-block;
 	vertical-align: middle;
-    max-width: 500px;
+    max-width: 350px;
     margin-left: 50px;
 }
 

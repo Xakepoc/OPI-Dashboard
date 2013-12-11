@@ -17,15 +17,16 @@
                             <div class="tiles green added-margin">
                                 <div class="tiles-body">
                                     <div class="tiles-title">
-                                        LARGEST AWARDS
+                                        TOTAL PORTFOLIO
                                     </div>	
                                     <div class="heading">
-                                        $ <span class="animate-number" data-value="@Model.Statistic.LargestAward.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="1200">0</span>M
+                                        $ <span class="animate-number" data-value="@Model.Statistic.TotalPortfolio.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="1200">0</span>M
                                     </div>
                                     <div class="progress transparent progress-white progress-small no-radius">
                                         <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="100%" ></div>
                                     </div>
-                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                    <div class="description" style="visibility: hidden"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                    
                                 </div>
                             </div>
                         </div>
@@ -41,7 +42,7 @@
                                     <div class="progress transparent progress-small no-radius">
                                         <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="100%" ></div>
                                     </div>				
-                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                    <div class="description" style="visibility: hidden"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
                                 </div>
                             </div>
                         </div>
@@ -52,15 +53,15 @@
                             <div class="tiles green added-margin">
                                 <div class="tiles-body">
                                     <div class="tiles-title">
-                                        TOTAL DIRECT EXPENSES
+                                        CORE PROJECTS
                                     </div>	
                                     <div class="heading">
-                                        $ <span class="animate-number" data-value="@Model.Statistic.TotalDirectExpenses.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="600">0</span>M
+                                        $ <span class="animate-number" data-value="@Model.Statistic.CoreProjects.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="600">0</span>M
                                     </div>
                                     <div class="progress transparent progress-white progress-small no-radius">
                                         <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="100%" ></div>
                                     </div>
-                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; @Model.Statistic.CoreProjectsPercent.ToString("#.##", CultureInfo.InvariantCulture) %</span></span></div>	
                                 </div>
                             </div>
                         </div> 
@@ -68,15 +69,15 @@
                             <div class="tiles green added-margin">
                                 <div class="tiles-body">
                                     <div class="tiles-title">
-                                        CORE PROJECTS
+                                        STRATEGIC PROJECTS
                                     </div>	
                                     <div class="heading">
-                                        $ <span class="animate-number" data-value="@Model.Statistic.CoreProjects.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="1200">0</span>M
+                                        $ <span class="animate-number" data-value="@Model.Statistic.StrategicProjects.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="1200">0</span>M
                                     </div>
                                     <div class="progress transparent progress-white progress-small no-radius">
                                         <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="100%" ></div>
                                     </div>
-                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; @Model.Statistic.StrategicProjectsPercent.ToString("#.##", CultureInfo.InvariantCulture) %</span></span></div>	
                                 </div>
                             </div>
                         </div> 
@@ -87,15 +88,15 @@
                             <div class="tiles green added-margin">
                                 <div class="tiles-body">		
                                     <div class="tiles-title">
-                                        %OF PORTFOLIO
+                                        TOTAL GATES
                                     </div>	
                                     <div class="heading">
-                                        <span class="animate-number" data-value="@Model.Statistic.PercentOfPortfolio.ToString("#", CultureInfo.InvariantCulture)" data-animation-duration="1000">0</span>%	
+                                        <span class="animate-number" data-value="@Model.Statistic.TotalGates.ToString("#.##", CultureInfo.InvariantCulture)" data-animation-duration="1000">0</span>%	
                                     </div>
                                     <div class="progress transparent progress-small no-radius">
-                                        <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="@Model.Statistic.PercentOfPortfolio.ToString("#", CultureInfo.InvariantCulture)%" ></div>
+                                        <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="100%" ></div>
                                     </div>				
-                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; @Model.Statistic.TotalGatesPercent.ToString("#.##", CultureInfo.InvariantCulture) %</span></span></div>	
                                 </div>
                             </div>
                         </div>
@@ -104,15 +105,38 @@
                             <div class="tiles green added-margin">
                                 <div class="tiles-body">
                                     <div class="tiles-title">
-                                        TOTAL W/O PGMF
+                                        TOTAL CHEVRON
                                     </div>	
                                     <div class="heading">
-                                        $ <span class="animate-number" data-value="@Model.Statistic.TotalWoPGMF.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="1200">0</span>M
+                                        $ <span class="animate-number" data-value="@Model.Statistic.TotalChevron.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="1200">0</span>M
                                     </div>
                                     <div class="progress transparent progress-white progress-small no-radius">
                                         <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="100%" ></div>
                                     </div>
-                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 0% higher <span class="blend">than last month</span></span></div>	
+                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; @Model.Statistic.TotalChevronPercent.ToString("#.##", CultureInfo.InvariantCulture) %</span></span></div>	
+                                </div>
+                            </div>
+                        </div> 
+
+                    </div>
+                    <div class="row spacing-bottom">
+                        <div class="col-sm-6 spacing-bottom-sm">
+                            
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="tiles green added-margin">
+                                <div class="tiles-body">
+                                    <div class="tiles-title">
+                                        TOTAL COCA-COLA
+                                    </div>	
+                                    <div class="heading">
+                                        $ <span class="animate-number" data-value="@Model.Statistic.TotalCocaCola.ToString("#.#", CultureInfo.InvariantCulture)" data-animation-duration="1200">0</span>M
+                                    </div>
+                                    <div class="progress transparent progress-white progress-small no-radius">
+                                        <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="100%" ></div>
+                                    </div>
+                                    <div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; @Model.Statistic.TotalCocaColaPercent.ToString("#.##", CultureInfo.InvariantCulture) %</span></span></div>	
                                 </div>
                             </div>
                         </div> 

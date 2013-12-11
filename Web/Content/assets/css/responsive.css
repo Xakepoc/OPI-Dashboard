@@ -794,21 +794,33 @@ and (orientation : portrait) {
 	}
 }
 
-@media (max-width: 1000px){
-	#Parks.list .meta{
-		width: 150px;
-	}
-	
-
-@media (max-width: 840px){
-	#Parks.list .meta.region,
-	#Parks.list .meta.rec{
+@media (max-width: 1000px) {
+    #Parks.list .meta {
+        width: 150px;
+    }
+}
+@media (max-width: 1760px) {
+    #Parks.list .meta.competency{
 		display: none;
 	}
 }
-
-@media (max-width: 540px){
-	#Parks.list .meta.area{
+@media (max-width: 1550px) {
+    #Parks.list .meta.area{
+		display: none;
+	}
+}
+@media (max-width: 1350px) {
+    #Parks.list .meta.country{
+		display: none;
+	}
+}
+@media (max-width: 1150px){
+	#Parks.list .meta.region{
+		display: none;
+	}
+}
+@media (max-width: 600px){
+	#Parks.list .meta.dates{
 		display: none;
 	}
 }
